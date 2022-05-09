@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var h,l;
+    var r=false;
+    do{
+        var b=parseInt(Math.random()*10);
+        var c=3;
+        do{
+            var a=prompt("saisir le nombre");
+            if(a==null){
+                l=confirm("est-ce que vous voulez quitter ?");
+                if (l==true)
+                break;
+            }
+            else{
+            if(parseInt(a)==b){
+                r=true;
+                h=confirm("BRAVO , c'est juste ! , et voulez vous rejouez ?");
+            }
+            else{
+                c--;
+                if(c!=0){
+                    alert("c'est faux , et il vous reste "+c+" chances");}
+                else{
+                    h=confirm("c'est terminer et vous avez perdu :: le nombre correct est "+b+" :: et voulez vous rejouez ?");}
+                }
+            }
+        }while(((c>0) && (r==false)) || (l==false));
+    }while(h==true || l==false);
+    </script>
+</body>
+</html>
