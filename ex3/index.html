@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/journal/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha512-g06pohSHYbSOHKq8tdDGXckE6C23Yt30xlTFDhrO0OcO/bNO2MWXb63oqU/Y23GDMNOon100eGHxZPBnT4QgMw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      .todo{
+        margin: 0.25rem;
+        background: wheat;
+        color: black;
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s ease;
+      }
+      .todo li {
+        flex: 1;
+      }
+      .todo-item{
+        padding: 0rem 0.5rem;
+      }
+      .trash-btn{
+        background: red;
+        color: black;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-size: 0.75rem;
+      }
+      .fa-trash{
+        pointer-events: none;
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <ol class="todo-list" style="list-style: none;">
+              <div class="todo">
+              </div>
+            </ol>
+          </div>
+          <div class="col">
+            <form>
+                <div class="row mb-3">
+                  <label for="nom" class="col-sm-2 col-form-label">Name : </label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="contenu" class="col-sm-2 col-form-label">Content : </label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="content">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="addbtn">Add Todo</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="foncTodo.js"></script>
+</body>
+</html>
